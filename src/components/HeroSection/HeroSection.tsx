@@ -4,9 +4,21 @@ import { memo } from 'react';
 import { nanoid } from 'nanoid';
 import sunflowerVideo from '../../assets/videos/fly-over-field-of-blossom-yellow-sunflowers-slow-movement.webm';
 import AnimatedText from './AnimatedText';
+import { CursorMovementTracker } from '../cursorMovementTracker/CursorMovementTracker';
 
 const HeroSection = memo(() => {
   return (
+    <CursorMovementTracker render={({x,y}: {x:number,y:number}) => {
+      return (
+          <Box
+          zIndex={100}
+          position={"absolute"}
+          top={y}
+          left={x}
+         >
+              🌻
+          </Box>
+      )} }>
     <Box
       component={motion.section}
       initial={{ opacity: 0 }}
@@ -117,7 +129,6 @@ const HeroSection = memo(() => {
       >
         <AnimatedText />
       </Box>
-
       {/* Floating particles effect */}
       {[...Array(6)].map((_, i) => {
         const particleId = nanoid();
@@ -155,6 +166,7 @@ const HeroSection = memo(() => {
         );
       })}
     </Box>
+    </CursorMovementTracker>
   );
 });
 
