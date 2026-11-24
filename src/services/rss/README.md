@@ -98,7 +98,7 @@ async function generateFeedWithRealContent() {
 ## Feed Location
 
 Once deployed, the feed will be available at:
-- Production: `https://mohit.life/feed.xml`
+- Production: `https://mohit.smartagent.one/feed.xml`
 - Development: `http://localhost:5173/feed.xml`
 
 ## Browser Integration

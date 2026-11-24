@@ -7,4 +7,4 @@ Allow: /
 Allow: /feed.xml
 
 # Sitemap
-Sitemap: https://mohit.life/sitemap.xml
+Sitemap: https://mohit.smartagent.one/sitemap.xml

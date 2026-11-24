@@ -1,0 +1,16 @@
+// Static hosting on Cloudflare Workers. `npm run deploy` publishes to the domain below.
+// The smartagent.one zone is shared with the Smart Agent app and backend: this file owns one
+// hostname only. Never change a zone-wide setting for this site.
+{
+  "$schema": "https://unpkg.com/wrangler@4.121.0/config-schema.json",
+  "name": "mohit-personal-website",
+  "account_id": "a0605c8367e4c99cf8267eb7750fdc02",
+  "compatibility_date": "2026-08-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "mohit.smartagent.one", "custom_domain": true }],
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}

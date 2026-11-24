@@ -2,59 +2,62 @@
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:webfeeds="http://webfeeds.org/rss/1.0" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Mohit Patel - Digital Presence</title>
-    <link>https://mohit.life</link>
+    <link>https://mohit.smartagent.one</link>
     <description>Latest updates, thoughts, projects, and mini-apps from Mohit Patel</description>
     <language>en-us</language>
     <managingEditor>mohit@teziapp.com (Mohit Patel)</managingEditor>
     <webMaster>mohit@teziapp.com (Mohit Patel)</webMaster>
-    <copyright>Copyright 2025 Mohit Patel</copyright>
-    <lastBuildDate>Mon, 27 Oct 2025 13:38:16 GMT</lastBuildDate>
+    <copyright>Copyright 2026 Mohit Patel</copyright>
+    <lastBuildDate>Tue, 24 Nov 2026 13:59:45 GMT</lastBuildDate>
 
   <item>
     <title>Welcome to My Digital Presence</title>
-    <link>https://mohit.life</link>
-    <guid isPermaLink="true">https://mohit.life</guid>
-    <pubDate>Mon, 27 Oct 2025 13:38:16 GMT</pubDate>
+    <link>https://mohit.smartagent.one</link>
+    <guid isPermaLink="true">https://mohit.smartagent.one</guid>
+    <pubDate>Tue, 24 Nov 2026 13:59:45 GMT</pubDate>
     <author>mohit@teziapp.com (Mohit Patel)</author>
     <category>Announcement</category>
     <category>Personal</category>
 
-    <description><![CDATA[
+    <description>A delightful way to experience who I am and what I build. Explore my portfolio, mini-apps, and connect with me.</description>
+    <content:encoded><![CDATA[
           <h2>Welcome to My Digital Presence</h2>
           <p>This is a living, breathing digital identity platform where you don't just see my work—you experience who I am.</p>
           <p>Explore my portfolio, try interactive mini-apps, read my thoughts, and connect with me.</p>
-          <p><a href="https://mohit.life">Visit the site →</a></p>
-        ]]></description>
+          <p><a href="https://mohit.smartagent.one">Visit the site →</a></p>
+        ]]></content:encoded>
   </item>
   <item>
     <title>Mini-Apps Collection Launching Soon</title>
-    <link>https://mohit.life#mini-apps</link>
-    <guid isPermaLink="true">https://mohit.life#mini-apps</guid>
-    <pubDate>Sun, 26 Oct 2025 13:38:16 GMT</pubDate>
+    <link>https://mohit.smartagent.one#mini-apps</link>
+    <guid isPermaLink="true">https://mohit.smartagent.one#mini-apps</guid>
+    <pubDate>Mon, 23 Nov 2026 13:59:45 GMT</pubDate>
     <author>mohit@teziapp.com (Mohit Patel)</author>
     <category>Development</category>
     <category>Featured</category>
 
-    <description><![CDATA[
+    <description>Interactive experiences and tools that showcase my creativity and technical skills.</description>
+    <content:encoded><![CDATA[
           <h2>Mini-Apps Collection</h2>
           <p>Stay tuned for a collection of interactive mini-applications!</p>
           <p>These will include games, tools, creative experiments, and more.</p>
-        ]]></description>
+        ]]></content:encoded>
   </item>
   <item>
     <title>Follow My Journey</title>
-    <link>https://mohit.life#about</link>
-    <guid isPermaLink="true">https://mohit.life#about</guid>
-    <pubDate>Sat, 25 Oct 2025 13:38:16 GMT</pubDate>
+    <link>https://mohit.smartagent.one#about</link>
+    <guid isPermaLink="true">https://mohit.smartagent.one#about</guid>
+    <pubDate>Sun, 22 Nov 2026 13:59:45 GMT</pubDate>
     <author>mohit@teziapp.com (Mohit Patel)</author>
     <category>Personal</category>
     <category>Learning</category>
 
-    <description><![CDATA[
+    <description>Join me on my journey of learning, building, and growing in the tech world.</description>
+    <content:encoded><![CDATA[
           <h2>About Me</h2>
-           I created <strong>mohit.life</strong> because I'm forgetting who I am. Who I was, What I did, What I am supposed to do.
-           I'll come to this website for direction.
-        ]]></description>
+          <p>I'm a passionate developer focused on creating delightful digital experiences.</p>
+          <p>I believe in learning in public and building meaningful connections.</p>
+        ]]></content:encoded>
   </item>
   </channel>
 </rss>

@@ -14,7 +14,7 @@ import { createDefaultChannel, generateRSS } from '../src/services/rss/generator
  */
 function getRSSConfig() {
   // Get site URL from environment or default
-  const siteUrl = process.env.VITE_SITE_URL || 'https://mohit.life';
+  const siteUrl = process.env.VITE_SITE_URL || 'https://mohit.smartagent.one';
   const authorName = process.env.VITE_AUTHOR_NAME || 'Mohit Patel';
   const authorEmail = process.env.VITE_AUTHOR_EMAIL || 'mohit@teziapp.com';
 
