@@ -1,7 +1,10 @@
 // biome-ignore lint: Test files use custom matchers from jest-dom
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import HeroSection from './HeroSection';
+
+const renderHero = () => render(<HeroSection />, { wrapper: MemoryRouter });
 
 describe('HeroSection', () => {
   beforeEach(() => {
@@ -22,12 +25,12 @@ describe('HeroSection', () => {
   });
 
   it('renders without crashing', () => {
-    const { container } = render(<HeroSection />);
+    const { container } = renderHero();
     expect(container).toBeTruthy();
   });
 
   it('has full viewport height', () => {
-    const { container } = render(<HeroSection />);
+    const { container } = renderHero();
     const section = container.querySelector('section');
     
     // Styles are computed by MUI - just verify section exists with proper layout
@@ -38,7 +41,7 @@ describe('HeroSection', () => {
   });
 
   it('renders video element', () => {
-    const { container } = render(<HeroSection />);
+    const { container } = renderHero();
     const video = container.querySelector('video');
     
     expect(video).toBeInTheDocument();
@@ -48,7 +51,7 @@ describe('HeroSection', () => {
   });
 
   it('video has correct attributes', () => {
-    const { container } = render(<HeroSection />);
+    const { container } = renderHero();
     const video = container.querySelector('video');
     
     expect(video).toHaveStyle({
@@ -58,13 +61,13 @@ describe('HeroSection', () => {
   });
 
   it('renders content text', () => {
-    const { container } = render(<HeroSection />);
+    const { container } = renderHero();
     const hasText = container.textContent?.includes('Welcome') || container.textContent?.includes('Mohit');
     expect(hasText).toBe(true);
   });
 
   it('has centered content layout', () => {
-    const { container } = render(<HeroSection />);
+    const { container } = renderHero();
     const contentContainer = container.querySelector('div');
     
     // Should have content container
@@ -72,7 +75,7 @@ describe('HeroSection', () => {
   });
 
   it('has overflow hidden', () => {
-    const { container } = render(<HeroSection />);
+    const { container } = renderHero();
     const section = container.querySelector('section');
     
     expect(section).toHaveStyle({
@@ -81,14 +84,14 @@ describe('HeroSection', () => {
   });
 
   it('is semantically correct', () => {
-    const { container } = render(<HeroSection />);
+    const { container } = renderHero();
     const section = container.querySelector('section');
     
     expect(section).toBeInTheDocument();
   });
 
   it('has multiple overlay layers', () => {
-    const { container } = render(<HeroSection />);
+    const { container } = renderHero();
     const overlays = container.querySelectorAll('div');
     
     // Should have multiple div elements (overlays + content)
@@ -96,10 +99,15 @@ describe('HeroSection', () => {
   });
 
   it('renders particles effect', () => {
-    const { container } = render(<HeroSection />);
+    const { container } = renderHero();
     
     // Particles are animated and rendered by framer-motion
     // Test passes if component renders successfully
     expect(container.querySelector('section')).toBeInTheDocument();
+  });
+
+  it('links to the booking page', () => {
+    renderHero();
+    expect(screen.getByRole('link', { name: 'Book a 1-on-1' })).toHaveAttribute('href', '/book');
   });
 });

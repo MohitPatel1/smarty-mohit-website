@@ -1,8 +1,10 @@
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import { motion } from 'framer-motion';
 import { memo } from 'react';
 import { nanoid } from 'nanoid';
 import sunflowerVideo from '../../assets/videos/fly-over-field-of-blossom-yellow-sunflowers-slow-movement.webm';
+import { Link as RouterLink } from 'react-router-dom';
+import { BOOKING_ROUTE } from '../../features/booking';
 import AnimatedText from './AnimatedText';
 import { CursorMovementTracker } from '../cursorMovementTracker/CursorMovementTracker';
 
@@ -128,6 +130,9 @@ const HeroSection = memo(() => {
         }}
       >
         <AnimatedText />
+        <Button component={RouterLink} to={BOOKING_ROUTE} variant="contained" sx={{ mt: 4 }}>
+          Book a 1-on-1
+        </Button>
       </Box>
       {/* Floating particles effect */}
       {[...Array(6)].map((_, i) => {
